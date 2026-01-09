@@ -26,6 +26,8 @@ A ComfyUI custom node for 3D camera angle control. Provides an interactive Three
 
 3. Restart ComfyUI
 
+4. download lora from https://huggingface.co/fal/Qwen-Image-Edit-2511-Multiple-Angles-LoRA/tree/main into your lora folder
+
 ## Usage
 
 1. Add the **Qwen Multiangle Camera** node from the `image/multiangle` category

